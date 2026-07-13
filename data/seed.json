@@ -1,0 +1,163 @@
+{
+  "vendors": [
+    {
+      "id": "vnd-001",
+      "name": "AlphaLog Transportes",
+      "category": "Logística",
+      "owner": "Operações",
+      "monthlySpend": 42800,
+      "contractValue": 513600,
+      "renewalDate": "2026-08-18",
+      "criticality": "high",
+      "sla": { "target": 96, "actual": 91.4 },
+      "compliance": {
+        "taxCertificate": "expired",
+        "insurance": "valid",
+        "lgpdDpa": "valid",
+        "antiCorruption": "missing"
+      },
+      "incidentsLast90Days": 5,
+      "lastAuditDays": 214,
+      "paymentTerms": 21,
+      "riskNotes": "Atrasos de entrega na região sudeste e declaração anticorrupção ausente."
+    },
+    {
+      "id": "vnd-002",
+      "name": "NexaPay Gateway",
+      "category": "Pagamentos",
+      "owner": "Financeiro",
+      "monthlySpend": 19600,
+      "contractValue": 235200,
+      "renewalDate": "2026-10-05",
+      "criticality": "high",
+      "sla": { "target": 99.5, "actual": 99.7 },
+      "compliance": {
+        "taxCertificate": "valid",
+        "insurance": "valid",
+        "lgpdDpa": "valid",
+        "antiCorruption": "valid"
+      },
+      "incidentsLast90Days": 1,
+      "lastAuditDays": 48,
+      "paymentTerms": 30,
+      "riskNotes": "Fornecedor estável com documentação em dia."
+    },
+    {
+      "id": "vnd-003",
+      "name": "Datacore Cloud Backup",
+      "category": "TI",
+      "owner": "Tecnologia",
+      "monthlySpend": 27200,
+      "contractValue": 326400,
+      "renewalDate": "2026-09-12",
+      "criticality": "high",
+      "sla": { "target": 99.9, "actual": 98.2 },
+      "compliance": {
+        "taxCertificate": "valid",
+        "insurance": "expired",
+        "lgpdDpa": "missing",
+        "antiCorruption": "valid"
+      },
+      "incidentsLast90Days": 3,
+      "lastAuditDays": 132,
+      "paymentTerms": 15,
+      "riskNotes": "Acordo de tratamento de dados ausente em fornecedor crítico de TI."
+    },
+    {
+      "id": "vnd-004",
+      "name": "Prisma Facilities",
+      "category": "Facilities",
+      "owner": "Administração",
+      "monthlySpend": 11800,
+      "contractValue": 141600,
+      "renewalDate": "2027-01-24",
+      "criticality": "medium",
+      "sla": { "target": 94, "actual": 95.3 },
+      "compliance": {
+        "taxCertificate": "valid",
+        "insurance": "valid",
+        "lgpdDpa": "not_required",
+        "antiCorruption": "valid"
+      },
+      "incidentsLast90Days": 0,
+      "lastAuditDays": 87,
+      "paymentTerms": 45,
+      "riskNotes": "Bom SLA e documentos obrigatórios completos."
+    },
+    {
+      "id": "vnd-005",
+      "name": "MarketPulse Media",
+      "category": "Marketing",
+      "owner": "Crescimento",
+      "monthlySpend": 15300,
+      "contractValue": 183600,
+      "renewalDate": "2026-07-30",
+      "criticality": "medium",
+      "sla": { "target": 92, "actual": 86.8 },
+      "compliance": {
+        "taxCertificate": "expired",
+        "insurance": "not_required",
+        "lgpdDpa": "missing",
+        "antiCorruption": "missing"
+      },
+      "incidentsLast90Days": 4,
+      "lastAuditDays": 305,
+      "paymentTerms": 10,
+      "riskNotes": "Contrato renova em breve apesar de SLA fraco e documentos de dados incompletos."
+    },
+    {
+      "id": "vnd-006",
+      "name": "LegalOne Consultoria",
+      "category": "Jurídico",
+      "owner": "Jurídico",
+      "monthlySpend": 8900,
+      "contractValue": 106800,
+      "renewalDate": "2026-12-08",
+      "criticality": "low",
+      "sla": { "target": 90, "actual": 93.5 },
+      "compliance": {
+        "taxCertificate": "valid",
+        "insurance": "valid",
+        "lgpdDpa": "valid",
+        "antiCorruption": "valid"
+      },
+      "incidentsLast90Days": 0,
+      "lastAuditDays": 166,
+      "paymentTerms": 30,
+      "riskNotes": "Baixa exposição operacional e documentação conforme."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-001",
+      "vendorId": "vnd-001",
+      "title": "Solicitar certidão fiscal atualizada",
+      "priority": "high",
+      "dueInDays": 3,
+      "owner": "Financeiro"
+    },
+    {
+      "id": "task-002",
+      "vendorId": "vnd-003",
+      "title": "Enviar DPA LGPD para assinatura",
+      "priority": "critical",
+      "dueInDays": 1,
+      "owner": "Jurídico"
+    },
+    {
+      "id": "task-003",
+      "vendorId": "vnd-005",
+      "title": "Bloquear renovação automática até completar documentos",
+      "priority": "critical",
+      "dueInDays": 0,
+      "owner": "Compras"
+    }
+  ],
+  "policy": {
+    "today": "2026-07-13",
+    "renewalWarningDays": 60,
+    "auditStaleDays": 180,
+    "highSpendThreshold": 25000,
+    "minimumSlaTolerance": 2
+  }
+}

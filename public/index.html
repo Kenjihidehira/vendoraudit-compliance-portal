@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VendorAudit Portal de Compliance</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Operações de risco de fornecedores</p>
+        <h1>VendorAudit Portal de Compliance</h1>
+      </div>
+      <button id="simulateBtn" type="button">Simular bloqueio de renovação</button>
+    </header>
+
+    <main>
+      <section class="kpi-grid" id="kpis" aria-label="Métricas principais de fornecedores"></section>
+
+      <section class="layout">
+        <article class="panel wide">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Central de risco</p>
+              <h2>Portfólio de fornecedores</h2>
+            </div>
+            <span id="portfolioCount" class="badge">Carregando</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fornecedor</th>
+                  <th>Responsável</th>
+                  <th>Risco</th>
+                  <th>Renovação</th>
+                  <th>SLA</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody id="vendorRows"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside class="panel">
+          <div class="panel-heading compact">
+            <div>
+              <p class="eyebrow">Automação</p>
+              <h2>Fila prioritária</h2>
+            </div>
+          </div>
+          <div id="taskList" class="task-list"></div>
+        </aside>
+      </section>
+
+      <section class="layout bottom">
+        <article class="panel">
+          <div class="panel-heading compact">
+            <div>
+              <p class="eyebrow">Renovações</p>
+              <h2>Próximos 120 dias</h2>
+            </div>
+          </div>
+          <div id="renewals" class="stack-list"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading compact">
+            <div>
+              <p class="eyebrow">Compliance</p>
+              <h2>Matriz de documentos</h2>
+            </div>
+          </div>
+          <div id="matrix" class="matrix"></div>
+        </article>
+      </section>
+    </main>
+
+    <dialog id="simulationDialog">
+      <form method="dialog">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Resultado da simulação</p>
+            <h2>Impacto do bloqueio de renovação</h2>
+          </div>
+          <button class="ghost" value="cancel">Fechar</button>
+        </div>
+        <pre id="simulationOutput"></pre>
+      </form>
+    </dialog>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

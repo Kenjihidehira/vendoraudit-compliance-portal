@@ -1,0 +1,22 @@
+{
+  "name": "vendoraudit-compliance-portal",
+  "version": "1.0.0",
+  "description": "VendorAudit Portal de Compliance é uma demonstração comercial para risco de fornecedores, renovação contratual, SLA e operações de compliance.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/*.test.js",
+    "smoke": "node tests/smoke.js",
+    "check": "node --check src/server.js && node --check src/vendorEngine.js && node --check public/app.js"
+  },
+  "keywords": [
+    "supplier-management",
+    "vendor-risk",
+    "compliance",
+    "contract-renewal",
+    "operations-dashboard"
+  ],
+  "author": "Kenjihidehira",
+  "license": "MIT"
+}

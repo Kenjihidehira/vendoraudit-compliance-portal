@@ -1,0 +1,62 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#EEF3F4"/>
+  <rect width="1280" height="104" fill="#102326"/>
+  <rect y="99" width="1280" height="5" fill="#007D79"/>
+  <text x="48" y="40" fill="#7FC9C4" font-family="Arial" font-size="14" font-weight="700">OPERAÇÕES DE RISCO DE FORNECEDORES</text>
+  <text x="48" y="76" fill="#F6FBFB" font-family="Arial" font-size="34" font-weight="700">VendorAudit Portal de Compliance</text>
+  <rect x="1020" y="31" width="212" height="42" rx="6" fill="#007D79"/>
+  <text x="1038" y="57" fill="white" font-family="Arial" font-size="14" font-weight="700">Simular bloqueio</text>
+  <g>
+    <rect x="48" y="136" width="280" height="98" rx="8" fill="white" stroke="#D9E0E3"/>
+    <text x="68" y="166" fill="#5D6971" font-family="Arial" font-size="14" font-weight="700">Gasto mensal</text>
+    <text x="68" y="210" fill="#172026" font-family="Arial" font-size="30" font-weight="700">R$ 125.600</text>
+    <rect x="344" y="136" width="280" height="98" rx="8" fill="white" stroke="#D9E0E3"/>
+    <text x="364" y="166" fill="#5D6971" font-family="Arial" font-size="14" font-weight="700">Exposição de alto risco</text>
+    <text x="364" y="210" fill="#172026" font-family="Arial" font-size="30" font-weight="700">R$ 1.023.600</text>
+    <rect x="640" y="136" width="280" height="98" rx="8" fill="white" stroke="#D9E0E3"/>
+    <text x="660" y="166" fill="#5D6971" font-family="Arial" font-size="14" font-weight="700">Renovações em 60 dias</text>
+    <text x="660" y="210" fill="#172026" font-family="Arial" font-size="30" font-weight="700">2</text>
+    <rect x="936" y="136" width="296" height="98" rx="8" fill="white" stroke="#D9E0E3"/>
+    <text x="956" y="166" fill="#5D6971" font-family="Arial" font-size="14" font-weight="700">Documentos pendentes</text>
+    <text x="956" y="210" fill="#172026" font-family="Arial" font-size="30" font-weight="700">7</text>
+  </g>
+  <rect x="48" y="258" width="780" height="390" rx="8" fill="white" stroke="#D9E0E3"/>
+  <text x="68" y="291" fill="#005F5C" font-family="Arial" font-size="12" font-weight="700">CENTRAL DE RISCO</text>
+  <text x="68" y="319" fill="#172026" font-family="Arial" font-size="20" font-weight="700">Portfólio de fornecedores</text>
+  <rect x="68" y="348" width="740" height="1" fill="#D9E0E3"/>
+  <text x="68" y="382" fill="#5D6971" font-family="Arial" font-size="12" font-weight="700">FORNECEDOR</text>
+  <text x="286" y="382" fill="#5D6971" font-family="Arial" font-size="12" font-weight="700">RESPONSÁVEL</text>
+  <text x="424" y="382" fill="#5D6971" font-family="Arial" font-size="12" font-weight="700">RISCO</text>
+  <text x="556" y="382" fill="#5D6971" font-family="Arial" font-size="12" font-weight="700">RENOVAÇÃO</text>
+  <g font-family="Arial" font-size="15">
+    <text x="68" y="424" fill="#172026" font-weight="700">MarketPulse Media</text>
+    <text x="286" y="424" fill="#172026">Crescimento</text>
+    <rect x="424" y="404" width="96" height="28" rx="14" fill="#FFF0ED"/>
+    <text x="440" y="423" fill="#B42318" font-size="12" font-weight="700">crítico 98</text>
+    <text x="556" y="424" fill="#172026" font-weight="700">17 dias</text>
+    <text x="68" y="480" fill="#172026" font-weight="700">AlphaLog Transportes</text>
+    <text x="286" y="480" fill="#172026">Operações</text>
+    <rect x="424" y="460" width="96" height="28" rx="14" fill="#FFF0ED"/>
+    <text x="440" y="479" fill="#B42318" font-size="12" font-weight="700">crítico 92</text>
+    <text x="556" y="480" fill="#172026" font-weight="700">36 dias</text>
+    <text x="68" y="536" fill="#172026" font-weight="700">Datacore Cloud Backup</text>
+    <text x="286" y="536" fill="#172026">Tecnologia</text>
+    <rect x="424" y="516" width="82" height="28" rx="14" fill="#FFF5E6"/>
+    <text x="440" y="535" fill="#BC6C25" font-size="12" font-weight="700">alto 75</text>
+    <text x="556" y="536" fill="#172026" font-weight="700">61 dias</text>
+  </g>
+  <rect x="852" y="258" width="380" height="390" rx="8" fill="white" stroke="#D9E0E3"/>
+  <text x="872" y="291" fill="#005F5C" font-family="Arial" font-size="12" font-weight="700">AUTOMAÇÃO</text>
+  <text x="872" y="319" fill="#172026" font-family="Arial" font-size="20" font-weight="700">Fila prioritária</text>
+  <g font-family="Arial">
+    <rect x="872" y="354" width="340" height="72" rx="7" fill="#FBFDFD" stroke="#D9E0E3"/>
+    <text x="890" y="384" fill="#172026" font-size="15" font-weight="700">Bloquear renovação automática...</text>
+    <text x="890" y="408" fill="#5D6971" font-size="13">Compras | vence hoje</text>
+    <rect x="872" y="442" width="340" height="72" rx="7" fill="#FBFDFD" stroke="#D9E0E3"/>
+    <text x="890" y="472" fill="#172026" font-size="15" font-weight="700">Enviar DPA LGPD para assinatura</text>
+    <text x="890" y="496" fill="#5D6971" font-size="13">Jurídico | vence em 1 dia</text>
+    <rect x="872" y="530" width="340" height="72" rx="7" fill="#FBFDFD" stroke="#D9E0E3"/>
+    <text x="890" y="560" fill="#172026" font-size="15" font-weight="700">Abrir plano de recuperação de SLA</text>
+    <text x="890" y="584" fill="#5D6971" font-size="13">Operações | vence em 5 dias</text>
+  </g>
+</svg>
