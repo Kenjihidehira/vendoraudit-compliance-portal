@@ -1,39 +1,39 @@
-# VendorAudit Portal de Compliance
+# VendorAudit - Portal de Conformidade
 
-VendorAudit Portal de Compliance é um sistema web pronto para portfólio, voltado a risco de fornecedores, documentos de compliance, acompanhamento de SLA, governança de renovações e automação de compras.
+VendorAudit é um portal web pronto para portfólio, voltado a risco de fornecedores, documentos de conformidade, acompanhamento de SLA, governança de renovações e automação de compras.
 
-O caso comercial é direto: empresas que pagam múltiplos fornecedores precisam de visibilidade antes de contratos renovarem automaticamente, pagamentos serem liberados ou falhas de compliance virarem risco operacional. O projeto demonstra um dashboard B2B que pode ser adaptado para times de compras, financeiro, jurídico ou operações.
+O caso comercial é direto: empresas que pagam múltiplos fornecedores precisam de visibilidade antes de contratos renovarem automaticamente, pagamentos serem liberados ou falhas de conformidade virarem risco operacional. O projeto demonstra um painel B2B que pode ser adaptado para times de compras, financeiro, jurídico ou operações.
 
-![Prévia do dashboard](docs/dashboard-preview.svg)
+![Prévia do painel](docs/dashboard-preview.svg)
 
 ## Valor Comercial
 
-- Ajuda compras a bloquear renovações arriscadas antes do rollover contratual.
+- Ajuda compras a bloquear renovações arriscadas antes da renovação automática.
 - Dá ao financeiro uma visão clara da exposição contratual de alto risco e do gasto mensal com fornecedores.
-- Ajuda jurídico e compliance a acompanhar documentos ausentes, como certidão fiscal, seguro, DPA LGPD e declaração anticorrupção.
+- Ajuda jurídico e conformidade a acompanhar documentos ausentes, como certidão fiscal, seguro, DPA LGPD e declaração anticorrupção.
 - Cria uma fila automática de tarefas para responsáveis por fornecedores, reduzindo dependência de planilhas.
-- Demonstra design de API, modelagem de regra de negócio, UI de dashboard, dados de exemplo e empacotamento para deploy sem serviços externos.
+- Demonstra projeto de API, modelagem de regra de negócio, interface de painel, dados de exemplo e empacotamento para publicação sem serviços externos.
 
 ## Funcionalidades
 
-- Score de risco por fornecedor baseado em criticidade, documentos ausentes, gaps de SLA, incidentes, auditorias antigas, proximidade de renovação e exposição financeira.
-- KPIs executivos para gasto mensal, valor anual contratado, exposição de alto risco, renovações e pendências de compliance.
-- Dashboard de portfólio de fornecedores ordenado por risco calculado.
-- Pipeline de renovação para contratos dos próximos 120 dias.
-- Matriz de compliance com status dos documentos obrigatórios por fornecedor.
-- Fila de automação que combina tarefas manuais e ações geradas para compliance, SLA e auditoria.
+- Pontuação de risco por fornecedor baseada em criticidade, documentos ausentes, diferenças de SLA, incidentes, auditorias antigas, proximidade de renovação e exposição financeira.
+- KPIs executivos para gasto mensal, valor anual contratado, exposição de alto risco, renovações e pendências de conformidade.
+- Painel de portfólio de fornecedores ordenado por risco calculado.
+- Agenda de renovação para contratos dos próximos 120 dias.
+- Matriz de conformidade com status dos documentos obrigatórios por fornecedor.
+- Fila de automação que combina tarefas manuais e ações geradas para conformidade, SLA e auditoria.
 - Simulação de bloqueio de renovação que estima valor contratual protegido.
-- Frontend responsivo com dados comerciais realistas.
+- Interface responsiva com dados comerciais realistas.
 - Testes de API, regras de negócio e smoke test usando Node.js nativo.
 
 ## Stack
 
 - Servidor HTTP nativo em Node.js
 - JavaScript com ES modules
-- Frontend em HTML e CSS
+- Interface em HTML e CSS
 - `node:test` nativo
 - Dados de exemplo em JSON
-- Dockerfile para empacotamento de deploy
+- Dockerfile para empacotamento e publicação
 
 ## Execução Local
 
@@ -53,7 +53,7 @@ Abra:
 http://127.0.0.1:4182
 ```
 
-Nenhum banco de dados é necessário para a demonstração. Os dados são carregados de `data/seed.json`.
+Nenhum banco de dados é necessário para a demonstração. Os dados de exemplo são carregados de `data/seed.json`.
 
 ## Visão Geral da API
 
@@ -61,10 +61,10 @@ Nenhum banco de dados é necessário para a demonstração. Os dados são carreg
 | --- | --- | --- |
 | GET | `/api/health` | Saúde do serviço |
 | GET | `/api/summary` | KPIs executivos de fornecedores |
-| GET | `/api/vendors` | Portfólio de fornecedores com score de risco |
+| GET | `/api/vendors` | Portfólio de fornecedores com pontuação de risco |
 | GET | `/api/risk-breakdown` | Contagem de fornecedores por nível de risco |
-| GET | `/api/renewals` | Pipeline de renovação dos próximos 120 dias |
-| GET | `/api/compliance-matrix` | Status de documentos de compliance por fornecedor |
+| GET | `/api/renewals` | Agenda de renovação dos próximos 120 dias |
+| GET | `/api/compliance-matrix` | Status de documentos de conformidade por fornecedor |
 | GET | `/api/automation-queue` | Fila de ações manuais e geradas |
 | POST | `/api/simulate/renewal-hold` | Estima renovações bloqueadas e valor protegido |
 
@@ -72,13 +72,13 @@ As notas completas dos endpoints estão em [`docs/api-endpoints.md`](docs/api-en
 
 ## Exemplos de Regras de Negócio
 
-- Documentos de compliance ausentes ou vencidos aumentam o risco do fornecedor.
+- Documentos de conformidade ausentes ou vencidos aumentam o risco do fornecedor.
 - Contratos que renovam dentro da janela de política disparam revisão de compras.
 - Fornecedores críticos com SLA fraco exigem plano de recuperação.
 - Auditorias antigas geram trabalho de acompanhamento para compras.
 - Renovações arriscadas com gaps documentais são bloqueadas na simulação.
 
-## Deploy
+## Publicação
 
 ### Docker
 

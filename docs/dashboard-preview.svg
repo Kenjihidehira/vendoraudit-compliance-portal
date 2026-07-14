@@ -3,7 +3,7 @@
   <rect width="1280" height="104" fill="#102326"/>
   <rect y="99" width="1280" height="5" fill="#007D79"/>
   <text x="48" y="40" fill="#7FC9C4" font-family="Arial" font-size="14" font-weight="700">OPERAÇÕES DE RISCO DE FORNECEDORES</text>
-  <text x="48" y="76" fill="#F6FBFB" font-family="Arial" font-size="34" font-weight="700">VendorAudit Portal de Compliance</text>
+  <text x="48" y="76" fill="#F6FBFB" font-family="Arial" font-size="34" font-weight="700">VendorAudit - Portal de Conformidade</text>
   <rect x="1020" y="31" width="212" height="42" rx="6" fill="#007D79"/>
   <text x="1038" y="57" fill="white" font-family="Arial" font-size="14" font-weight="700">Simular bloqueio</text>
   <g>

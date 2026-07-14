@@ -12,7 +12,7 @@ try {
   const queue = await fetch(`${baseUrl}/api/automation-queue`).then((response) => response.json());
 
   assert.equal(home.status, 200);
-  assert.match(await home.text(), /VendorAudit Portal de Compliance/);
+  assert.match(await home.text(), /VendorAudit - Portal de Conformidade/);
   assert.equal(summary.documentsPending, 7);
   assert.ok(queue.length >= 10);
 

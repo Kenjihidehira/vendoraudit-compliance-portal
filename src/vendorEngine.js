@@ -156,10 +156,10 @@ export function automationQueue(data) {
   const generated = vendorPortfolio(data).flatMap((vendor) => {
     const actions = [];
     if (vendor.renewalDays <= data.policy.renewalWarningDays) {
-      actions.push(taskFor(vendor, 'Revisar risco da renovação antes do rollover contratual', vendor.renewalDays <= 15 ? 'critical' : 'high', 'Compras'));
+      actions.push(taskFor(vendor, 'Revisar risco antes da renovação automática', vendor.renewalDays <= 15 ? 'critical' : 'high', 'Compras'));
     }
     for (const doc of vendor.missingDocuments) {
-      actions.push(taskFor(vendor, `Solicitar ${doc.label.toLowerCase()} (${documentStatus(doc.status)})`, doc.status === 'missing' ? 'critical' : 'high', 'Compliance'));
+      actions.push(taskFor(vendor, `Solicitar ${doc.label.toLowerCase()} (${documentStatus(doc.status)})`, doc.status === 'missing' ? 'critical' : 'high', 'Conformidade'));
     }
     if (vendor.slaGap > data.policy.minimumSlaTolerance) {
       actions.push(taskFor(vendor, 'Abrir plano de recuperação de SLA com responsável do fornecedor', 'high', vendor.owner));
@@ -183,7 +183,7 @@ export function simulateRenewalHold(data) {
       contractValue: vendor.contractValue,
       riskLevel: vendor.riskLevel,
       renewalDays: vendor.renewalDays,
-      reason: vendor.missingDocuments.length > 0 ? 'Documentos de compliance incompletos' : 'Risco crítico do fornecedor'
+      reason: vendor.missingDocuments.length > 0 ? 'Documentos de conformidade incompletos' : 'Risco crítico do fornecedor'
     }));
 
   return {
@@ -194,7 +194,7 @@ export function simulateRenewalHold(data) {
 }
 
 function recommendationForVendor(vendor, policy, score, docs, renewalDays, slaGap) {
-  if (renewalDays <= 15 && docs.length > 0) return 'Bloquear renovação até fechar pendências de compliance';
+  if (renewalDays <= 15 && docs.length > 0) return 'Bloquear renovação até fechar pendências de conformidade';
   if (score >= 78) return 'Escalar para compras, financeiro e jurídico';
   if (slaGap > policy.minimumSlaTolerance) return 'Negociar plano de recuperação de SLA e penalidades';
   if (docs.length > 0) return 'Solicitar documentos pendentes antes do próximo ciclo de pagamento';
